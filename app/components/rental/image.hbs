@@ -1,4 +1,24 @@
-<div class='image'>
+{{! Conditional inline }}
+<button
+  {{on 'click' this.toggleSize}}
+  type='button'
+  class='image {{if this.isLarge 'large'}}'
+>
   {{! Accepts ALL passed attributes }}
   <img ...attributes />
-</div>>
+  <small>View {{if this.isLarge 'Smaller' 'Larger'}}</small>
+</button>
+
+{{! Conditional Block Format }}
+
+{{!-- {{#if this.isLarge}}
+  <div class='image large'>
+  <img ...attributes />
+  <small>View Smaller</small>
+</div>
+{{else}}
+  <div class='image'>
+    <img ...attributes />
+    <small>View Larger</small>
+  </div>
+{{/if}} --}}
