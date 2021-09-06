@@ -6,4 +6,9 @@ export default class Router extends EmberRouter {
   rootURL = config.rootURL;
 }
 
-Router.map(function () {});
+Router.map(function () {
+  // adds /about as a valid route
+  this.route('about');
+  // Will load the contact.hbs template at route /getting-in-touch
+  this.route('contact', { path: 'getting-in-touch' });
+});
