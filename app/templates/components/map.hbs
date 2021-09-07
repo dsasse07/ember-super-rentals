@@ -1,0 +1,10 @@
+<div class='map'>
+  <img
+    alt='Map image at coordinates {{@lat}},{{@lng}}'
+    ...attributes
+    {{! Since alt is before ..attrs it can be overwritten. The rest below cannot }}
+    src={{this.src}}
+    width={{@width}}
+    height={{@height}}
+  />
+</div>
