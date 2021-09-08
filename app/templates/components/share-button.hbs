@@ -1,0 +1,11 @@
+<a
+  ...attributes
+  href={{this.shareURL}}
+  target='_blank'
+  rel='external nofollow noopener noreferrer'
+  {{! Concats with invoked classes, does not override }}
+  class='share button'
+>
+  {{! Will render children of the component here}}
+  {{yield}}
+</a>

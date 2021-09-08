@@ -32,9 +32,7 @@ module('Integration | Component | rental', function (hooks) {
 
     assert.dom('article').hasClass('rental');
     assert.dom('article h3').hasText('Grand Old Mansion');
-    assert
-      .dom('article h3 a')
-      .hasAttribute('href', '/rentals/grand-old-mansion');
+    assert.dom('article a').hasAttribute('href', '/rentals/grand-old-mansion');
     assert.dom('article .detail.owner').includesText('Veruca Salt');
     assert.dom('article .detail.type').includesText('Standalone');
     assert.dom('article .detail.location').includesText('San Francisco');
