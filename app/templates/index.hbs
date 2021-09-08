@@ -6,14 +6,11 @@
 
 <div class='rentals'>
   <ul class='results'>
-    <li>
-      <Rental />
-    </li>
-    <li>
-      <Rental />
-    </li>
-    <li>
-      <Rental />
-    </li>
+    {{#each @model as |rental|}}
+      <li>
+        {{! Passed data to component like a prop in React }}
+        <Rental @rental={{rental}} />
+      </li>
+    {{/each}}
   </ul>
 </div>

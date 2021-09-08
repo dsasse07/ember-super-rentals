@@ -11,4 +11,6 @@ Router.map(function () {
   this.route('about');
   // Will load the contact.hbs template at route /getting-in-touch
   this.route('contact', { path: 'getting-in-touch' });
+  // A Dynamic route using :rental_id slug
+  this.route('rental', { path: '/rentals/:rental_id' });
 });
