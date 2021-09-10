@@ -1,0 +1,15 @@
+<div class='rentals'>
+  <label>
+    <span>Where would you like to stay?</span>
+    <Input class='light' @value={{this.query}} />
+  </label>
+
+  <ul class='results'>
+    {{#each @rentals as |rental|}}
+      <li>
+        {{! Passed data to component like a prop in React }}
+        <Rental @rental={{rental}} />
+      </li>
+    {{/each}}
+  </ul>
+</div>
