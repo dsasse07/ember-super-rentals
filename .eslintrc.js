@@ -36,6 +36,7 @@ module.exports = {
       ],
       parserOptions: {
         sourceType: 'script',
+        parser: '@typescript-eslint/parser',
       },
       env: {
         browser: false,
