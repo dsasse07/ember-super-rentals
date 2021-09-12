@@ -5,11 +5,11 @@
   </label>
 
   <ul class='results'>
-    {{#each @rentals as |rental|}}
-      <li>
-        {{! Passed data to component like a prop in React }}
-        <Rental @rental={{rental}} />
-      </li>
-    {{/each}}
+    {{! Rentals::Filter is a provider component }}
+    <RentalsFilter @rentals={{@rentals}} @query={{this.query}} as |results|>
+      {{#each results as |rental|}}
+        <li><Rental @rental={{rental}} /></li>
+      {{/each}}
+    </RentalsFilter>
   </ul>
 </div>
